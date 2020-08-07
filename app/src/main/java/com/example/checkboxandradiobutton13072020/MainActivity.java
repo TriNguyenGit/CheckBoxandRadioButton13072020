@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -21,7 +22,12 @@ public class MainActivity extends AppCompatActivity {
         mCBAndroid.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-                
+                if(b){
+                    Toast.makeText(MainActivity.this,"Chose Android",Toast.LENGTH_SHORT).show();
+                }else {
+                    Toast.makeText(MainActivity.this,"Bỏ Android",Toast.LENGTH_SHORT).show();
+                }
+
             }
         });
     }
